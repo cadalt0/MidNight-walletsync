@@ -6,9 +6,11 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootDir = join(__dirname, '..');
-const tsxPath = join(rootDir, 'node_modules', 'tsx', 'dist', 'cli.js');
 
-const result = spawnSync(process.execPath, [tsxPath, join(rootDir, 'src', 'cli.ts'), ...process.argv.slice(2)], {
+// Try to find tsx from package node_modules
+const tsxPath = join(rootDir, 'node_modules', '.bin', 'tsx');
+
+const result = spawnSync(tsxPath, [join(rootDir, 'src', 'cli.ts'), ...process.argv.slice(2)], {
   cwd: rootDir,
   env: {
     ...process.env,
