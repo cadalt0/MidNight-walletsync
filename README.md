@@ -1,5 +1,8 @@
 # MidNight-walletsync
 
+[![npm version](https://img.shields.io/npm/v/midnightwalletsync?style=flat-square)](https://www.npmjs.com/package/midnightwalletsync)
+[View on npm](https://www.npmjs.com/package/midnightwalletsync)
+
 A lightweight Midnight wallet synchronization SDK and CLI for keeping one or more wallets synced, saving snapshots locally, and querying balances from a running synced process.
 
 This package is designed for a local workspace. It is not a public RPC replacement and it does not hold any secrets by itself; it reads seeds from your `.env` file and uses them to build and start wallet instances.
