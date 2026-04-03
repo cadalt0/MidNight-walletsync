@@ -10,6 +10,7 @@
     "sync": "NODE_OPTIONS=--no-deprecation ../node_modules/.bin/tsx src/cli.ts sync",
     "balance": "NODE_OPTIONS=--no-deprecation ../node_modules/.bin/tsx src/cli.ts balance",
     "status": "NODE_OPTIONS=--no-deprecation ../node_modules/.bin/tsx src/cli.ts status",
+    "build": "npm run typecheck",
     "typecheck": "../node_modules/.bin/tsc --noEmit"
   }
 }
